@@ -90,7 +90,7 @@ def show_inventory(inventory):
     if inventory:
         print("Inventory:")
         for item in inventory:
-            print(item)
+            print(" " + item)
     else:
         print("You're not carrying anything.")
 
