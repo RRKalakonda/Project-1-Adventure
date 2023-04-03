@@ -72,7 +72,7 @@ def go(direction, current_room, map_data):
     new_room_id = current_room["exits"][direction.lower()]
     new_room = map_data[new_room_id]
     print(f"You go {direction}.")
-    print(" ")
+    print("")
     return new_room
 
 current_room = map_data[0]
@@ -90,7 +90,8 @@ def show_inventory(inventory):
     if inventory:
         print("Inventory:")
         for item in inventory:
-            print(" " + item)
+            print("  ")
+            print(item)
     else:
         print("You're not carrying anything.")
 
@@ -148,8 +149,12 @@ while True:
         if command == "go":
             if len(action) == 2:
                 direction = action[1]
-                current_room = go(direction, current_room, map_data)
-                display_room(current_room)
+                room = go(direction, current_room, map_data)
+                if room == current_room:
+                    pass
+                else:
+                    current_room = room
+                    display_room(current_room)
             else:
                 print("Sorry, you need to 'go' somewhere.")
         elif command == "look" and len(action) == 1:
@@ -177,7 +182,11 @@ while True:
             print("Invalid use of the command. Type 'help' to see the correct usage.")
     elif command in directions and len(action) == 1:
         # direction = [k for k, v in directions.items() if v == command][0]
-        current_room = go(command, current_room, map_data)
-        display_room(current_room)
+        room = go(command, current_room, map_data)
+        if room == current_room:
+            pass
+        else:
+            current_room = room
+            display_room(current_room)
     else:
         print("Sorry, you need to use a valid command. Type 'help' to see the available commands.")
