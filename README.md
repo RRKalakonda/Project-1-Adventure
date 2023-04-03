@@ -1,6 +1,18 @@
 # Project-1-Adventure
-Rishika Reva Kalakonda
 
+Rishika Reva Kalakonda - rkalakon@stevens.edu
+
+URL of this Git repo https://github.com/RRKalakonda/Project-1-Adventure
+
+I have spent around 30 hours to do this project
+
+a description of how you tested your code - 
+
+any bugs or issues you could not resolve - 
+
+an example of a difficult issue or bug and how you resolved - 
+
+a list of the three extensions you’ve chosen to implement, with appropriate detail on them for the CAs to evaluate them (i.e., what are the new verbs/features, how do you exercise them, where are they in the map) - 
 
 # Text Adventure Game
 
