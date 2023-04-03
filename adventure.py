@@ -72,6 +72,7 @@ def go(direction, current_room, map_data):
     new_room_id = current_room["exits"][direction.lower()]
     new_room = map_data[new_room_id]
     print(f"You go {direction}.")
+    print(" ")
     return new_room
 
 current_room = map_data[0]
