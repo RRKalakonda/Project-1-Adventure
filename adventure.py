@@ -50,14 +50,19 @@ else:
 
 def display_room(room):
     print(f"> {room['name']}")
+    print("")
     print(room['desc'])
-    exits = " ".join(room['exits'].keys())
-    print(f"Exits: {exits}")
-
+    print("")
     if "items" in room:
         if len(room['items']) > 0:
             items = " ".join(room['items'])
             print(f"Items: {items}")
+            print("")
+    exits = " ".join(room['exits'].keys())
+    print(f"Exits: {exits}")
+    print("")
+
+
 
 def go(direction, current_room, map_data):
     if direction.lower() not in current_room["exits"]:
