@@ -1,8 +1,7 @@
 import json
-
-
 import os
 import argparse
+import sys
 
 # Add argument parsing
 parser = argparse.ArgumentParser(description="Adventure Game")
@@ -43,9 +42,9 @@ def validate_map(map_data):
 
 
 if validate_map(map_data):
-    print("The map is valid.")
+    pass
 else:
-    print("The map is not valid.")
+    sys.exit("The map is not valid.")
 
 
 def display_room(room):
@@ -61,8 +60,6 @@ def display_room(room):
     exits = " ".join(room['exits'].keys())
     print(f"Exits: {exits}")
     print("")
-
-
 
 def go(direction, current_room, map_data):
     if direction.lower() not in current_room["exits"]:
